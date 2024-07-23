@@ -15,7 +15,7 @@ resource "aws_vpc" "main" {
 
 # EC2 
 resource "aws_instance" "terraform_group_project" {
-  ami                    = "YOURAMIHERE"
+  ami                    = "AMI"                        # Add your ami here
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance_sg.id]
   subnet_id              = aws_subnet.main.id
